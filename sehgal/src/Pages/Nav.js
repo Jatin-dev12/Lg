@@ -7,10 +7,10 @@ import Logo from '../Images/logo.png'
 
 
 function Header() {
-  const location = useLocation();
+    const location = useLocation();
     const pathname = location.pathname;
-
     const navigate = useNavigate();
+    
 
     const logoutAction = (e) => {
        

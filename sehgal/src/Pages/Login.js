@@ -57,7 +57,7 @@ const Login = () => {
                             <Form.Text className="text-danger">Invalid Email or Password.</Form.Text>
                         }
             <div className="form-group">
-              <label htmlFor="username">Username</label>
+              <label htmlFor="Email">Email</label>
               <input
                 type="email"
                 className="form-control"
