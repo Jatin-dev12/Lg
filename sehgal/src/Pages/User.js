@@ -2,8 +2,8 @@ import React from 'react'
 
 function User() {
   return (
-    <div>
-      <h1> User AAgya </h1>
+    <div className='nn'>
+      <h1> User Aagya </h1>
     </div>
   )
 }
