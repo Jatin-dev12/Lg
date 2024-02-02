@@ -3,7 +3,7 @@ import {  signInWithEmailAndPassword   } from 'firebase/auth';
 import { auth } from '../Firebase';
 import {  useNavigate } from 'react-router-dom'
 import '../Pages/Login.css';
-import Lg from '../Images/Admin.jpg'
+import Lg from '../Images/user.png'
 import './Adminpage'
  
 const Admin = () => {

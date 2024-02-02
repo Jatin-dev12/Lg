@@ -4,7 +4,7 @@ import { auth } from '../Firebase';
 import {  useNavigate } from 'react-router-dom'
 import '../Pages/Login.css';
 import { Form} from "react-bootstrap";
-import Lg from '../Images/user.png'
+import Lg from '../Images/Admin.jpg'
 import './Sabki.css'
  
 const Login = () => {
@@ -16,11 +16,13 @@ const Login = () => {
     const [validateErrors, setValidateErrors] = useState({});
     const [isSubmitted, setIsSubmitted] = useState(false);
 
+    const storeUserDataInSession = (user) => {
+        sessionStorage.setItem('user', JSON.stringify(user));
+      };
        
     const onLogin = (e) => {
         e.preventDefault();
         setIsSubmitted(true);
-
         setValidateErrors({});
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
@@ -92,79 +94,3 @@ const Login = () => {
  
 export default Login;
 
-
-// import React, { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
-// import '../Pages/Login.css';
-// import Lg from '../Images/Admin.jpg'
-
-// function App() {
-//   const [username, setUsername] = useState('');
-//   const [password, setPassword] = useState('');
-//   const [error, setError] = useState(false);
-//     const navigate = useNavigate();
-    
-//     const handleSubmit = (e) => {
-//       e.preventDefault();
-//       if (username === 'admin' && password === '123456') {
-      
-//         navigate('/Home');
-//       } else {
-//         setError(true);
-//       }
-//     };
-
-
-//   return (
-//     <>
-//     <div className="container">
-//       <div className="row">
-//         <div className="col-md-6">
-//           <img
-//             src={Lg}
-//             alt="Login "
-//             className="img-fluid"
-//           />
-//         </div>
-//         <div className="col-md-6">
-//           <h2> Admin Login</h2>
-//           <form onSubmit={handleSubmit}>
-//             <div className="form-group">
-//               <label htmlFor="username">Username</label>
-//               <input
-//                 type="username"
-//                 className="form-control"
-//                 id="username"
-//                 placeholder="Enter name"
-//                 name="username"
-//                 value={username}
-//                 onChange={(e) => setEmail(e.target.value)}
-//               />
-//             </div>
-//             <div className="form-group">
-//               <label htmlFor="password">Password</label>
-//               <input
-//                 type="password"
-//                 className="form-control"
-//                 id="password"
-//                 placeholder="Enter password"
-//                 name="password"
-//                 value={password}
-//                 onChange={(e) => setPassword(e.target.value)}
-//               />
-//             </div>
-//             <button type="submit" className="btn btn-primary">
-//               Login
-//             </button>
-//           </form>
-//           <p className="forgot-password text-right">
-//             Forgot <a href="/">password?</a>
-//           </p>
-//         </div>
-//       </div>
-//     </div>
-//     </>
-//   );
-// }
-
-// export default App;
