@@ -1,0 +1,32 @@
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+img.d-inline-block.align-top{
+  margin-left: 20px;
+}
+.nav-item {
+  float: none;
+}
+
+.nav-link {
+  float: none;
+}
+
+.navbar-brand {
+  float: none;
+}
+
+.navbar-collapse {
+  float: none;
+}
+
+.nav-item{
+  margin-right: 10px;
+}
+a.btn.btn-primary {
+  margin: 10px;
+}
